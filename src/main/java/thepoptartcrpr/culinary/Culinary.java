@@ -5,6 +5,9 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
+import thepoptartcrpr.culinary.events.EntityEvents;
+import thepoptartcrpr.culinary.utils.Utils;
 
 @Mod(modid = Culinary.MODID, name = Culinary.NAME, version = Culinary.VERSION)
 public class Culinary {
@@ -15,7 +18,7 @@ public class Culinary {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        MinecraftForge.EVENT_BUS.register(new EntityEvents());
     }
 
     @EventHandler
