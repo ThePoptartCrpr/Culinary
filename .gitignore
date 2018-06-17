@@ -1,0 +1,52 @@
+## Based on example from https://gist.github.com/Choonster/6447037d24d0ed5898b8
+
+
+## Directories
+
+run/
+.gradle/
+build/
+out/
+
+## Files
+
+gradle-app.setting
+forge-1.7.10-10.13.4.1614-1.7.10-changelog.txt
+README.txt
+
+
+## IntelliJ IDEA
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+## Eclipse
+
+eclipse/
+*.pydevproject
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
