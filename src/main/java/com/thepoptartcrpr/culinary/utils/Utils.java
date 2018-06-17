@@ -1,9 +1,8 @@
-package thepoptartcrpr.culinary.utils;
+package com.thepoptartcrpr.culinary.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.message.Message;
-import thepoptartcrpr.culinary.Culinary;
+import com.thepoptartcrpr.culinary.Culinary;
 
 public class Utils {
 

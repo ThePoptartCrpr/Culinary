@@ -1,4 +1,4 @@
-package thepoptartcrpr.culinary.events;
+package com.thepoptartcrpr.culinary.events;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.passive.*;
