@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import java.util.Random;
 
 public class EntityEvents {
-
     private Random random = new Random();
 
     @SubscribeEvent
