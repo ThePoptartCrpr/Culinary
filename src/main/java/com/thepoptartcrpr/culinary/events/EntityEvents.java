@@ -1,10 +1,10 @@
 package com.thepoptartcrpr.culinary.events;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.*;
 import net.minecraft.init.Items;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Random;
 
@@ -14,9 +14,14 @@ public class EntityEvents {
 
     @SubscribeEvent
     public void onEntityDrop(LivingDropsEvent event) {
-        EntityLivingBase entityLiving = event.entityLiving;
+        EntityLivingBase entityLiving = event.getEntityLiving();
+
         if (entityLiving instanceof EntityAnimal) {
-            if (((EntityAnimal) entityLiving).getGrowingAge() == 0) entityLiving.dropItem(Items.bone, random.nextInt(3));
+            EntityAnimal animal = (EntityAnimal) entityLiving;
+
+            if (animal.getGrowingAge() == 0) {
+                animal.dropItem(Items.BONE, random.nextInt(3));
+            }
         }
     }
 
