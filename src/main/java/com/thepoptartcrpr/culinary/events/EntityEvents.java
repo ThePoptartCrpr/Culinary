@@ -18,9 +18,8 @@ public class EntityEvents {
         if (entityLiving instanceof EntityAnimal) {
             EntityAnimal animal = (EntityAnimal) entityLiving;
 
-            if (animal.getGrowingAge() == 0) {
+            if (animal.getGrowingAge() == 0)
                 animal.dropItem(Items.BONE, random.nextInt(3));
-            }
         }
     }
 
