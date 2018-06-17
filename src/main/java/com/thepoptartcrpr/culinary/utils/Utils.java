@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 import com.thepoptartcrpr.culinary.Culinary;
 
 public class Utils {
-
     private static Logger console;
 
     public static Logger getConsole() {
