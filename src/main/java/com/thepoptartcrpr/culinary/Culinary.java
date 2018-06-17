@@ -14,7 +14,7 @@ public class Culinary {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        MinecraftForge.EVENT_BUS.register(new EntityEvents());
     }
 
     @EventHandler
