@@ -1,11 +1,9 @@
 package com.thepoptartcrpr.culinary;
 
-import com.thepoptartcrpr.culinary.creativetabs.TabCIngredients;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
+import com.thepoptartcrpr.culinary.handlers.CCreativeTabs;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -20,19 +18,7 @@ public class Culinary {
     public static final String NAME = "Culinary";
     public static final String VERSION = "0.0.1";
 
-    public static final CreativeTabs tabIngredients = new CreativeTabs("cingredients") {
-
-        @Override
-        public ItemStack getTabIconItem() {
-            return new ItemStack(CItems.salt);
-        }
-
-        @Override
-        public boolean hasSearchBar() {
-            return true;
-        }
-
-    }.setBackgroundImageName("item_search.png");
+    CCreativeTabs cCreativeTabs = new CCreativeTabs();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
