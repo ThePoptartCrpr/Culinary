@@ -8,6 +8,7 @@ public class TabCIngredients extends CreativeTabs {
 
     public TabCIngredients() {
         super("cingredient");
+        setBackgroundImageName("item_search.png");
     }
 
     @Override
