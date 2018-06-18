@@ -13,10 +13,10 @@ public class EntityEvents {
 
     @SubscribeEvent
     public void onEntityDrop(LivingDropsEvent event) {
-        EntityLivingBase entityLiving = event.getEntityLiving();
+        EntityLivingBase entity = event.getEntityLiving();
 
-        if (entityLiving instanceof EntityAnimal) {
-            EntityAnimal animal = (EntityAnimal) entityLiving;
+        if (entity instanceof EntityAnimal) {
+            EntityAnimal animal = (EntityAnimal) entity;
 
             if (animal.getGrowingAge() == 0)
                 animal.dropItem(Items.BONE, random.nextInt(3));
