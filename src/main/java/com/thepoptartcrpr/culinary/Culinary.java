@@ -1,6 +1,6 @@
 package com.thepoptartcrpr.culinary;
 
-import com.thepoptartcrpr.culinary.creativetabs.TabCIngredients;
+import com.thepoptartcrpr.culinary.creativetabs.TabCIngredient;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
@@ -19,7 +19,7 @@ public class Culinary {
     private static Culinary instance;
 
     @Getter
-    private final CreativeTabs tabIngredients = new TabCIngredients();
+    private final CreativeTabs tabIngredient = new TabCIngredient();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {

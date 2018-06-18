@@ -3,3 +3,6 @@ tile.salt_ore.name=Salt Ore
 
 # Items
 item.salt.name=Salt
+
+# Creative Tabs
+itemGroup.cingredient=Culinary - Ingredients
