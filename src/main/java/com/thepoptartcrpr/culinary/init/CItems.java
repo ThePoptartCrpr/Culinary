@@ -1,7 +1,7 @@
 package com.thepoptartcrpr.culinary.init;
 
 import com.thepoptartcrpr.culinary.Culinary;
-import com.thepoptartcrpr.culinary.items.CItem;
+import com.thepoptartcrpr.culinary.items.SaltItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -14,11 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import java.util.Objects;
 
 public class CItems {
-    public static Item salt;
-
-    public CItems() {
-        salt = new CItem("salt");
-    }
+    public static Item salt = new SaltItem();
 
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {

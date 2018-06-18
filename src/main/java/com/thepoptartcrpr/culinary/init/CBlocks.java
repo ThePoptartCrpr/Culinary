@@ -1,8 +1,7 @@
 package com.thepoptartcrpr.culinary.init;
 
-import com.thepoptartcrpr.culinary.blocks.CBlock;
+import com.thepoptartcrpr.culinary.blocks.SaltBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -17,13 +16,7 @@ import java.util.Objects;
 // TODO: the name CBlocks (short for CulinaryBlocks) doesn't really fit, find better alternative but i cba rn
 
 public class CBlocks {
-
-    public static Block saltOre;
-
-    public CBlocks() {
-        saltOre = new CBlock("salt_ore", Material.ROCK, 2, 2);
-        saltOre.setHarvestLevel("pickaxe", 2);
-    }
+    public static Block saltOre = new SaltBlock();
 
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> event) {
