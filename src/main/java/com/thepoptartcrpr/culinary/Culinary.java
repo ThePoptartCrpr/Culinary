@@ -6,6 +6,7 @@ import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
 import lombok.Getter;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -20,6 +21,20 @@ public class Culinary {
 
     @Getter
     private final CreativeTabs tabIngredients = new TabCIngredients();
+
+    public static final CreativeTabs tabIngredients = new CreativeTabs("cingredients") {
+
+        @Override
+        public ItemStack getTabIconItem() {
+            return new ItemStack(CItems.salt);
+        }
+
+        @Override
+        public boolean hasSearchBar() {
+            return true;
+        }
+
+    }.setBackgroundImageName("item_search.png");
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
