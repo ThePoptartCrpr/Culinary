@@ -10,11 +10,11 @@ import net.minecraft.util.ResourceLocation;
 
 public class CBlock extends Block {
 
-    public CBlock(String unlocalizedName, String registryName, Material material, float hardness, float resistance) {
+    public CBlock(String name, Material material, float hardness, float resistance) {
         super(material);
 
-        this.setUnlocalizedName(unlocalizedName);
-        this.setRegistryName(new ResourceLocation(Culinary.MODID, registryName));
+        this.setUnlocalizedName(name);
+        this.setRegistryName(new ResourceLocation(Culinary.MODID, name));
         this.setHardness(hardness);
         this.setResistance(resistance);
     }

@@ -17,10 +17,12 @@ import java.util.Objects;
 // TODO: the name CBlocks (short for CulinaryBlocks) doesn't really fit, find better alternative but i cba rn
 
 public class CBlocks {
+
     public static Block saltOre;
 
     public CBlocks() {
-        saltOre = new CBlock("salt_ore", "salt_ore", Material.ROCK, 2, 2);
+        saltOre = new CBlock("salt_ore", Material.ROCK, 2, 2);
+        saltOre.setHarvestLevel("pickaxe", 2);
     }
 
     @SubscribeEvent
