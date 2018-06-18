@@ -12,3 +12,9 @@ item.corn_seeds.name=Corn Seeds
 
 # Creative Tabs
 itemGroup.cingredient=Culinary - Ingredients
+
+# Advancements
+advancement.culinary:crop=Culinary
+advancement.culinary:crop.desc=Break grass until you find one of the seeds added by Culinary
+advancement.culinary:harvest=The Harvest
+advancement.culinary:harvest.desc=Harvest a crop added by Culinary

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "culinary:corn_seeds"
+    },
+    "title": {
+      "translate": "advancement.culinary:crop"
+    },
+    "description": {
+      "translate": "advancement.culinary:crop.desc"
+    },
+    "background": "minecraft:textures/blocks/hay_block_side.png"
+  },
+  "criteria": {
+    "pickup_seed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "culinary:corn_seeds"
+          }
+        ]
+      }
+    }
+  }
+}
