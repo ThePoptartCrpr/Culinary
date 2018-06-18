@@ -4,9 +4,9 @@ import com.thepoptartcrpr.culinary.init.CItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class TabCIngredients extends CreativeTabs {
+public class TabCIngredient extends CreativeTabs {
 
-    public TabCIngredients() {
+    public TabCIngredient() {
         super("cingredient");
     }
 
