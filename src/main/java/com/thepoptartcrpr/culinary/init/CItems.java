@@ -18,7 +18,7 @@ public class CItems {
 
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
-        CreativeTabs tab = Culinary.getInstance().getTabIngredients();
+        CreativeTabs tab = Culinary.getInstance().getTabIngredient();
 
         event.getRegistry().registerAll(
             salt.setCreativeTab(tab)
