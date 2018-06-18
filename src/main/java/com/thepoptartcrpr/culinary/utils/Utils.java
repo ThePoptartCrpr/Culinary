@@ -8,7 +8,7 @@ public class Utils {
     private static Logger console;
 
     public static Logger getConsole() {
-        if (console == null) console = LogManager.getFormatterLogger(Culinary.MODID);
+        if (console == null) console = LogManager.getFormatterLogger(Culinary.Reference.MODID);
         return console;
     }
 

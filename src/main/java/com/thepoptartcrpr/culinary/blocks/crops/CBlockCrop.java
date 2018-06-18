@@ -8,7 +8,7 @@ public class CBlockCrop extends BlockCrops {
 
     public CBlockCrop(String name) {
         this.setUnlocalizedName(name);
-        this.setRegistryName(new ResourceLocation(Culinary.MODID, name));
+        this.setRegistryName(new ResourceLocation(Culinary.Reference.MODID, name));
     }
 
 }

@@ -19,7 +19,7 @@ public class CBlock extends Block {
         super(material);
 
         this.setUnlocalizedName(name);
-        this.setRegistryName(new ResourceLocation(Culinary.MODID, name));
+        this.setRegistryName(new ResourceLocation(Culinary.Reference.MODID, name));
         this.setHardness(hardness);
         this.setResistance(resistance);
     }
