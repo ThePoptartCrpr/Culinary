@@ -1,6 +1,6 @@
 package com.thepoptartcrpr.culinary.init;
 
-import com.thepoptartcrpr.culinary.blocks.ores.SaltBlock;
+import com.thepoptartcrpr.culinary.blocks.ores.BlockSaltOre;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -21,7 +21,7 @@ public class CBlocks {
     public static Block saltOre;
 
     public CBlocks() {
-        saltOre = new SaltBlock();
+        saltOre = new BlockSaltOre();
     }
 
     @SubscribeEvent
