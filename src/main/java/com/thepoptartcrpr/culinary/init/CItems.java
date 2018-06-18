@@ -1,7 +1,7 @@
 package com.thepoptartcrpr.culinary.init;
 
 import com.thepoptartcrpr.culinary.Culinary;
-import com.thepoptartcrpr.culinary.blocks.CItem;
+import com.thepoptartcrpr.culinary.items.CItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -25,7 +25,7 @@ public class CItems {
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-            salt
+            salt.setCreativeTab(Culinary.tabIngredients)
         );
     }
 

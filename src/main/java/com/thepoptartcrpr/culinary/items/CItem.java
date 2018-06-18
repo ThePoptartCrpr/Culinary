@@ -1,4 +1,4 @@
-package com.thepoptartcrpr.culinary.blocks;
+package com.thepoptartcrpr.culinary.items;
 
 import net.minecraft.item.Item;
 
