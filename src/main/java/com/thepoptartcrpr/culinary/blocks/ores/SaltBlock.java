@@ -1,5 +1,6 @@
-package com.thepoptartcrpr.culinary.blocks;
+package com.thepoptartcrpr.culinary.blocks.ores;
 
+import com.thepoptartcrpr.culinary.blocks.CBlock;
 import com.thepoptartcrpr.culinary.init.CItems;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
