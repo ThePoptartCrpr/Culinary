@@ -2,13 +2,16 @@ package com.thepoptartcrpr.culinary;
 
 import com.thepoptartcrpr.culinary.creativetabs.TabCIngredient;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
+import com.thepoptartcrpr.culinary.handlers.SeedHandler;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
+import com.thepoptartcrpr.culinary.proxy.CommonProxy;
 import lombok.Getter;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -18,18 +21,29 @@ public class Culinary {
     @Mod.Instance @Getter
     private static Culinary instance;
 
+    @SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, clientSide = Reference.CLIENT_PROXY_CLASS)
+    public static CommonProxy proxy;
+
     @Getter
     private final CreativeTabs tabIngredient = new TabCIngredient();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        proxy.preInit();
+
         MinecraftForge.EVENT_BUS.register(new CBlocks());
         MinecraftForge.EVENT_BUS.register(new CItems());
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
+        proxy.init();
+
         MinecraftForge.EVENT_BUS.register(new EntityEvents());
+
+        SeedHandler.registerSeeds();
+
+        // GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
     }
 
     @EventHandler
@@ -41,5 +55,7 @@ public class Culinary {
         public static final String MODID = "culinary";
         public static final String NAME = "Culinary";
         public static final String VERSION = "0.0.1";
+        public static final String SERVER_PROXY_CLASS = "com.thepoptartcrpr.culinary.proxy.ServerProxy";
+        public static final String CLIENT_PROXY_CLASS = "com.thepoptartcrpr.culinary.proxy.ClientProxy";
     }
 }
