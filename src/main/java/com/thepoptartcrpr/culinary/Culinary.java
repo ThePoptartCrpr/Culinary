@@ -1,6 +1,6 @@
 package com.thepoptartcrpr.culinary;
 
-import com.thepoptartcrpr.culinary.config.ConfigHandler;
+import com.thepoptartcrpr.culinary.handlers.ConfigHandler;
 import com.thepoptartcrpr.culinary.creativetabs.TabCIngredient;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
 import com.thepoptartcrpr.culinary.handlers.SeedHandler;

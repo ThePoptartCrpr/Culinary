@@ -1,6 +1,6 @@
 package com.thepoptartcrpr.culinary.events;
 
-import com.thepoptartcrpr.culinary.config.ConfigHandler;
+import com.thepoptartcrpr.culinary.handlers.ConfigHandler;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.*;
 import net.minecraft.init.Items;
