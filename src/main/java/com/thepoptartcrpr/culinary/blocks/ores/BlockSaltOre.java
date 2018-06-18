@@ -1,4 +1,4 @@
-package com.thepoptartcrpr.culinary.blocks;
+package com.thepoptartcrpr.culinary.blocks.ores;
 
 import com.thepoptartcrpr.culinary.Culinary;
 import com.thepoptartcrpr.culinary.init.CBlocks;
@@ -11,17 +11,23 @@ import net.minecraft.util.ResourceLocation;
 
 import java.util.Random;
 
-// TODO: the name CBlock (short for CulinaryBlock) doesn't really fit, find better alternative but i cba rn
+public class BlockSaltOre extends Block {
 
-public class CBlock extends Block {
-
-    public CBlock(String name, Material material, float hardness, float resistance) {
+    public BlockSaltOre(String name, Material material, float hardness, float resistance) {
         super(material);
 
         this.setUnlocalizedName(name);
         this.setRegistryName(new ResourceLocation(Culinary.Reference.MODID, name));
         this.setHardness(hardness);
         this.setResistance(resistance);
+    }
+
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return CItems.salt;
+    }
+
+    public int quantityDropped(Random random) {
+        return 2 + random.nextInt(3);
     }
 
 }

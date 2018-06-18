@@ -1,6 +1,7 @@
 package com.thepoptartcrpr.culinary.init;
 
 import com.thepoptartcrpr.culinary.blocks.CBlock;
+import com.thepoptartcrpr.culinary.blocks.ores.BlockSaltOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -21,7 +22,7 @@ public class CBlocks {
     public static Block saltOre;
 
     public CBlocks() {
-        saltOre = new CBlock("salt_ore", Material.ROCK, 2, 2);
+        saltOre = new BlockSaltOre("salt_ore", Material.ROCK, 2, 2);
         saltOre.setHarvestLevel("pickaxe", 2);
     }
 
