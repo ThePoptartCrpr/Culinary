@@ -1,6 +1,6 @@
 package com.thepoptartcrpr.culinary.init;
 
-import com.thepoptartcrpr.culinary.blocks.ores.BlockSaltOre;
+import com.thepoptartcrpr.culinary.blocks.ores.SaltOreBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -17,12 +17,7 @@ import java.util.Objects;
 // TODO: the name CBlocks (short for CulinaryBlocks) doesn't really fit, find better alternative but i cba rn
 
 public class CBlocks {
-
-    public static Block saltOre = new BlockSaltOre();
-
-    public CBlocks() {
-
-    }
+    public static Block saltOre = new SaltOreBlock();
 
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> event) {
