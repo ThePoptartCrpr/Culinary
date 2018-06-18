@@ -18,10 +18,10 @@ import java.util.Objects;
 
 public class CBlocks {
 
-    public static Block saltOre;
+    public static Block saltOre = new BlockSaltOre();
 
     public CBlocks() {
-        saltOre = new BlockSaltOre();
+
     }
 
     @SubscribeEvent
