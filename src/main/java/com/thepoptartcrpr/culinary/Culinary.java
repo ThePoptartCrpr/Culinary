@@ -7,6 +7,7 @@ import com.thepoptartcrpr.culinary.handlers.SeedHandler;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
 import com.thepoptartcrpr.culinary.proxy.CommonProxy;
+import com.thepoptartcrpr.culinary.worldgen.OreGeneration;
 import lombok.Getter;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Culinary.Reference.MODID, name = Culinary.Reference.NAME, version = Culinary.Reference.VERSION)
 public class Culinary {
@@ -46,7 +48,7 @@ public class Culinary {
 
         SeedHandler.registerSeeds();
 
-        // GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
+        GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
     }
 
     @EventHandler
