@@ -1,5 +1,6 @@
 package com.thepoptartcrpr.culinary.events;
 
+import com.thepoptartcrpr.culinary.config.ConfigHandler;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.*;
 import net.minecraft.init.Items;
@@ -15,7 +16,7 @@ public class EntityEvents {
     public void onEntityDrop(LivingDropsEvent event) {
         EntityLivingBase entity = event.getEntityLiving();
 
-        if (entity instanceof EntityAnimal) {
+        if (entity instanceof EntityAnimal && ConfigHandler.CONFIG.shouldDropBones) {
             EntityAnimal animal = (EntityAnimal) entity;
 
             if (animal.getGrowingAge() == 0)
