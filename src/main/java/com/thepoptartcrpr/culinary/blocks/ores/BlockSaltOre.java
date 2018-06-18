@@ -8,8 +8,8 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
-public class SaltBlock extends CBlock {
-    public SaltBlock() {
+public class BlockSaltOre extends CBlock {
+    public BlockSaltOre() {
         super("salt_ore", Material.ROCK, 2, 2);
         setHarvestLevel("pickaxe", 2);
     }
