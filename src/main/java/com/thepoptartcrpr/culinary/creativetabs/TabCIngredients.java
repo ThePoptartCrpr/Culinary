@@ -8,17 +8,11 @@ public class TabCIngredients extends CreativeTabs {
 
     public TabCIngredients() {
         super("cingredient");
-        setBackgroundImageName("item_search.png");
     }
 
     @Override
     public ItemStack getTabIconItem() {
         return new ItemStack(CItems.salt);
-    }
-
-    @Override
-    public boolean hasSearchBar() {
-        return true;
     }
 
 }

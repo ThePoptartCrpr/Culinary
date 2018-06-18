@@ -2,7 +2,6 @@ package com.thepoptartcrpr.culinary;
 
 import com.thepoptartcrpr.culinary.creativetabs.TabCIngredients;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
-import com.thepoptartcrpr.culinary.handlers.CCreativeTabs;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
 import lombok.Getter;

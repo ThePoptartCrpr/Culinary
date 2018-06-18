@@ -1,7 +1,6 @@
 package com.thepoptartcrpr.culinary.init;
 
 import com.thepoptartcrpr.culinary.Culinary;
-import com.thepoptartcrpr.culinary.handlers.CCreativeTabs;
 import com.thepoptartcrpr.culinary.items.CItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
