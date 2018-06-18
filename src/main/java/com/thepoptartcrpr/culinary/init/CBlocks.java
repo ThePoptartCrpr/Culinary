@@ -1,5 +1,6 @@
 package com.thepoptartcrpr.culinary.init;
 
+import com.thepoptartcrpr.culinary.blocks.crops.CornCropBlock;
 import com.thepoptartcrpr.culinary.blocks.ores.SaltOreBlock;
 
 import net.minecraft.block.Block;
@@ -17,25 +18,33 @@ import java.util.Objects;
 // TODO: the name CBlocks (short for CulinaryBlocks) doesn't really fit, find better alternative but i cba rn
 
 public class CBlocks {
+
+    // Ores
     public static Block saltOre = new SaltOreBlock();
+
+    // Crops
+    public static Block cornCrop = new CornCropBlock();
 
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(
-                saltOre
+                saltOre,
+                cornCrop
         );
     }
 
     @SubscribeEvent
     public void registerItemBlocks(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-                blockToItem(saltOre)
+                blockToItem(saltOre),
+                blockToItem(cornCrop)
         );
     }
 
     @SubscribeEvent
     public void registerRenders(ModelRegistryEvent event) {
         registerRender(Item.getItemFromBlock(saltOre));
+        registerRender(Item.getItemFromBlock(cornCrop));
     }
 
     private Item blockToItem(Block block) {

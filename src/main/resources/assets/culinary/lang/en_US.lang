@@ -1,8 +1,14 @@
 # Blocks
 tile.salt_ore.name=Salt Ore
 
+tile.corn_crop.name=Corn Crop
+
 # Items
 item.salt.name=Salt
+
+# Crops
+item.corn.name=Corn
+item.corn_seeds.name=Corn Seeds
 
 # Creative Tabs
 itemGroup.cingredient=Culinary - Ingredients
