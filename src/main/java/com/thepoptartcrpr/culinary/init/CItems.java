@@ -4,6 +4,7 @@ import com.thepoptartcrpr.culinary.Culinary;
 import com.thepoptartcrpr.culinary.handlers.CCreativeTabs;
 import com.thepoptartcrpr.culinary.items.CItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -22,8 +23,10 @@ public class CItems {
 
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
+        CreativeTabs tab = Culinary.getInstance().getTabIngredients();
+
         event.getRegistry().registerAll(
-            salt.setCreativeTab(CCreativeTabs.tabIngredients)
+            salt.setCreativeTab(tab)
         );
     }
 

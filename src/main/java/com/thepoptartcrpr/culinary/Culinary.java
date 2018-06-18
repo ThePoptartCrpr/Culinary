@@ -1,9 +1,12 @@
 package com.thepoptartcrpr.culinary;
 
+import com.thepoptartcrpr.culinary.creativetabs.TabCIngredients;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
 import com.thepoptartcrpr.culinary.handlers.CCreativeTabs;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
+import lombok.Getter;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -11,14 +14,13 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Culinary.MODID, name = Culinary.NAME, version = Culinary.VERSION)
+@Mod(modid = Culinary.Reference.MODID, name = Culinary.Reference.NAME, version = Culinary.Reference.VERSION)
 public class Culinary {
+    @Mod.Instance @Getter
+    private static Culinary instance;
 
-    public static final String MODID = "culinary";
-    public static final String NAME = "Culinary";
-    public static final String VERSION = "0.0.1";
-
-    CCreativeTabs cCreativeTabs = new CCreativeTabs();
+    @Getter
+    private final CreativeTabs tabIngredients = new TabCIngredients();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -36,4 +38,9 @@ public class Culinary {
 
     }
 
+    public static class Reference {
+        public static final String MODID = "culinary";
+        public static final String NAME = "Culinary";
+        public static final String VERSION = "0.0.1";
+    }
 }
