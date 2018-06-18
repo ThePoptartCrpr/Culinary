@@ -1,5 +1,6 @@
 package com.thepoptartcrpr.culinary;
 
+import com.thepoptartcrpr.culinary.config.ConfigHandler;
 import com.thepoptartcrpr.culinary.creativetabs.TabCIngredient;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
 import com.thepoptartcrpr.culinary.handlers.SeedHandler;
@@ -33,6 +34,8 @@ public class Culinary {
 
         MinecraftForge.EVENT_BUS.register(new CBlocks());
         MinecraftForge.EVENT_BUS.register(new CItems());
+
+        MinecraftForge.EVENT_BUS.register(new ConfigHandler());
     }
 
     @EventHandler
