@@ -1,4 +1,4 @@
-package com.thepoptartcrpr.culinary.config;
+package com.thepoptartcrpr.culinary.handlers;
 
 import com.thepoptartcrpr.culinary.Culinary;
 import net.minecraftforge.common.config.Config;
