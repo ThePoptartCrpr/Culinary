@@ -2,6 +2,7 @@ package com.thepoptartcrpr.culinary.proxy;
 
 import com.thepoptartcrpr.culinary.Culinary;
 import com.thepoptartcrpr.culinary.tileentity.OvenTileEntity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
@@ -15,7 +16,7 @@ public class CommonProxy {
     }
 
     public void registerTileEntities() {
-        GameRegistry.registerTileEntity(OvenTileEntity.class, Culinary.Reference.MODID + ":oven");
+        GameRegistry.registerTileEntity(OvenTileEntity.class, new ResourceLocation(Culinary.Reference.MODID + ":oven"));
     }
 
 }
