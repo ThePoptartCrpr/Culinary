@@ -1,0 +1,8 @@
+{
+  "parent": "culinary:block/machine",
+  "textures": {
+    "side": "culinary:blocks/oven_side",
+    "front": "culinary:blocks/oven_front_activated",
+    "top": "culinary:blocks/oven_top"
+  }
+}

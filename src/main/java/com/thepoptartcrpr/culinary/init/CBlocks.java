@@ -1,6 +1,8 @@
 package com.thepoptartcrpr.culinary.init;
 
+import com.thepoptartcrpr.culinary.Culinary;
 import com.thepoptartcrpr.culinary.blocks.crops.CornCropBlock;
+import com.thepoptartcrpr.culinary.blocks.machines.OvenBlock;
 import com.thepoptartcrpr.culinary.blocks.machines.TableBlock;
 import com.thepoptartcrpr.culinary.blocks.ores.SaltOreBlock;
 
@@ -28,13 +30,15 @@ public class CBlocks {
     public static Block cornCrop = new CornCropBlock();
 
     // Machines
-    public static Block tableEmpty = new TableBlock().setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+    public static Block oven = new OvenBlock().setCreativeTab(Culinary.getInstance().getTabMachine());
+    public static Block tableEmpty = new TableBlock().setCreativeTab(Culinary.getInstance().getTabMachine());
 
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(
                 saltOre,
                 cornCrop,
+                oven,
                 tableEmpty
         );
     }
@@ -44,6 +48,7 @@ public class CBlocks {
         event.getRegistry().registerAll(
                 blockToItem(saltOre),
                 blockToItem(cornCrop),
+                blockToItem(oven),
                 blockToItem(tableEmpty)
         );
     }
@@ -52,6 +57,7 @@ public class CBlocks {
     public void registerRenders(ModelRegistryEvent event) {
         registerRender(Item.getItemFromBlock(saltOre));
         registerRender(Item.getItemFromBlock(cornCrop));
+        registerRender(Item.getItemFromBlock(oven));
         registerRender(Item.getItemFromBlock(tableEmpty));
     }
 

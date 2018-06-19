@@ -3,6 +3,10 @@ tile.salt_ore.name=Salt Ore
 
 tile.corn_crop.name=Corn Crop
 
+# Machines
+tile.table_empty.name=Table
+tile.oven.name=Oven
+
 # Items
 item.salt.name=Salt
 
@@ -12,6 +16,7 @@ item.corn_seeds.name=Corn Seeds
 
 # Creative Tabs
 itemGroup.cingredient=Culinary - Ingredients
+itemGroup.cmachine=Culinary - Machines
 
 # Advancements
 advancement.culinary:crop=Culinary
