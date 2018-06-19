@@ -12,23 +12,36 @@ import net.minecraft.world.World;
 
 public class OvenTileEntity extends TileEntity implements ITickable {
 
+    // Temporary tick system to test NBT data. Will remove later.
+    private int tick = 0;
+
     public OvenTileEntity() {
 
     }
 
     @Override
     public void readFromNBT(NBTTagCompound nbt) {
+        super.readFromNBT(nbt);
 
+        this.tick = nbt.getInteger("Tick");
+        Utils.getConsole().info("read " + nbt.getInteger("Tick"));
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
-        return nbt;
+        nbt.setInteger("Tick", this.tick);
+        Utils.getConsole().info("saved " + this.tick);
+
+        return super.writeToNBT(nbt);
     }
 
     @Override
     public void update() {
-        Utils.log("eee");
+        if (!this.world.isRemote) {
+            tick++;
+            Utils.getConsole().info(tick);
+            this.markDirty();
+        }
     }
 
     @Override
@@ -63,10 +76,10 @@ public class OvenTileEntity extends TileEntity implements ITickable {
         return nbt;
     }
 
-    @Override
+    /*@Override
     public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
         if (oldState.getBlock() == newState.getBlock()) return false;
         return true;
-    }
+    }*/
 
 }
