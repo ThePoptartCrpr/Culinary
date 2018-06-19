@@ -1,5 +1,16 @@
 {
   "variants": {
-    "normal": { "model": "culinary:oven" }
+    "active=false,facing=north": { "model": "culinary:oven" },
+    "active=false,facing=south": { "model": "culinary:oven", "y": 180 },
+    "active=false,facing=east": { "model": "culinary:oven", "y": 90 },
+    "active=false,facing=west": { "model": "culinary:oven", "y": 270 },
+    "active=false,facing=up": { "model": "culinary:oven", "y": 180 },
+    "active=false,facing=down": { "model" :"culinary:oven", "y": 180 },
+    "active=true,facing=north": { "model" :"culinary:oven_active" },
+    "active=true,facing=south": { "model" :"culinary:oven_active", "y": 180 },
+    "active=true,facing=east": { "model": "culinary:oven_active", "y": 90 },
+    "active=true,facing=west": { "model": "culinary:oven_active", "y": 270 },
+    "active=true,facing=up": { "model": "culinary:oven_active", "y": 180 },
+    "active=true,facing=down": { "model": "culinary:oven_active", "y": 180 }
   }
 }

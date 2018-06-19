@@ -12,4 +12,9 @@ public class ServerProxy extends CommonProxy {
         super.init();
     }
 
+    @Override
+    public void registerTileEntities() {
+        super.registerTileEntities();
+    }
+
 }
