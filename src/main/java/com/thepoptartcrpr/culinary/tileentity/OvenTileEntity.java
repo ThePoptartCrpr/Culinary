@@ -65,7 +65,8 @@ public class OvenTileEntity extends TileEntity implements ITickable {
 
     @Override
     public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
-        return false;
+        if (oldState.getBlock() == newState.getBlock()) return false;
+        return true;
     }
 
 }
