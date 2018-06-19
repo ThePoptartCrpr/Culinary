@@ -37,6 +37,7 @@ public class Culinary {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit();
+        proxy.registerTileEntities();
 
         MinecraftForge.EVENT_BUS.register(new CBlocks());
         MinecraftForge.EVENT_BUS.register(new CItems());
