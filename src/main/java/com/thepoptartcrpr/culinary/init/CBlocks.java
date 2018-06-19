@@ -62,8 +62,8 @@ public class CBlocks {
     }
 
     private Item blockToItem(Block block) {
-        ResourceLocation saltOreLocation = Objects.requireNonNull(block.getRegistryName());
-        return new ItemBlock(block).setRegistryName(saltOreLocation);
+        ResourceLocation blockLocation = Objects.requireNonNull(block.getRegistryName());
+        return new ItemBlock(block).setRegistryName(blockLocation);
     }
 
     private void registerRender(Item item) {
