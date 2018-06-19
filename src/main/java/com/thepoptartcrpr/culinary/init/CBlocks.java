@@ -1,10 +1,12 @@
 package com.thepoptartcrpr.culinary.init;
 
 import com.thepoptartcrpr.culinary.blocks.crops.CornCropBlock;
+import com.thepoptartcrpr.culinary.blocks.machines.TableBlock;
 import com.thepoptartcrpr.culinary.blocks.ores.SaltOreBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
@@ -25,11 +27,15 @@ public class CBlocks {
     // Crops
     public static Block cornCrop = new CornCropBlock();
 
+    // Machines
+    public static Block tableEmpty = new TableBlock().setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(
                 saltOre,
-                cornCrop
+                cornCrop,
+                tableEmpty
         );
     }
 
@@ -37,7 +43,8 @@ public class CBlocks {
     public void registerItemBlocks(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
                 blockToItem(saltOre),
-                blockToItem(cornCrop)
+                blockToItem(cornCrop),
+                blockToItem(tableEmpty)
         );
     }
 
@@ -45,6 +52,7 @@ public class CBlocks {
     public void registerRenders(ModelRegistryEvent event) {
         registerRender(Item.getItemFromBlock(saltOre));
         registerRender(Item.getItemFromBlock(cornCrop));
+        registerRender(Item.getItemFromBlock(tableEmpty));
     }
 
     private Item blockToItem(Block block) {
