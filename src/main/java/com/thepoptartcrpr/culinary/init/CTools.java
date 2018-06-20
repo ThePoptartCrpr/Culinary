@@ -17,14 +17,12 @@ import java.util.Objects;
 
 public class CTools {
 
-    public static final Item.ToolMaterial steelKnifeMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":steelKnife", 2, 250, 2F, 4F, 12);
+    public static final Item.ToolMaterial steelKnifeMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":steelKnife", 2, 250, 2, 1F, 12);
 
     public static ItemSword steelKnife = new CItemSword(steelKnifeMaterial, "steel_knife");
 
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
-        CreativeTabs tabIngredient = Culinary.getInstance().getTabIngredient();
-
         event.getRegistry().registerAll(
                 steelKnife
         );
