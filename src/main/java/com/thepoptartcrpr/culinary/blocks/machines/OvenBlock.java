@@ -3,7 +3,6 @@ package com.thepoptartcrpr.culinary.blocks.machines;
 import com.thepoptartcrpr.culinary.Culinary;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.tileentity.OvenTileEntity;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;

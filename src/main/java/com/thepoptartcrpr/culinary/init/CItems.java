@@ -40,14 +40,18 @@ public class CItems {
 
     @SubscribeEvent
     public void registerRenders(ModelRegistryEvent event) {
-        registerRender(salt);
-        registerRender(cornSeeds);
-        registerRender(corn);
+        registerRender(
+                salt,
+                cornSeeds,
+                corn
+        );
     }
 
-    private void registerRender(Item item) {
-        ResourceLocation itemLocation = Objects.requireNonNull(item.getRegistryName());
-        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(itemLocation, "inventory"));
+    private void registerRender(Item... items) {
+        for (Item item : items) {
+            ResourceLocation itemLocation = Objects.requireNonNull(item.getRegistryName());
+            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(itemLocation, "inventory"));
+        }
     }
 
 }

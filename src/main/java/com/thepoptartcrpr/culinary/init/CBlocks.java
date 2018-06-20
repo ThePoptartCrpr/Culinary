@@ -8,7 +8,6 @@ import com.thepoptartcrpr.culinary.blocks.ores.SaltOreBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
@@ -55,10 +54,11 @@ public class CBlocks {
 
     @SubscribeEvent
     public void registerRenders(ModelRegistryEvent event) {
-        registerRender(Item.getItemFromBlock(saltOre));
-        registerRender(Item.getItemFromBlock(cornCrop));
-        registerRender(Item.getItemFromBlock(oven));
-        registerRender(Item.getItemFromBlock(tableEmpty));
+        registerRender(saltOre,
+                cornCrop,
+                oven,
+                tableEmpty
+        );
     }
 
     private Item blockToItem(Block block) {
@@ -66,8 +66,11 @@ public class CBlocks {
         return new ItemBlock(block).setRegistryName(blockLocation);
     }
 
-    private void registerRender(Item item) {
-        ResourceLocation itemLocation = Objects.requireNonNull(item.getRegistryName());
-        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(itemLocation, "inventory"));
+    private void registerRender(Block... blocks) {
+        for (Block block : blocks) {
+            Item item = Item.getItemFromBlock(block);
+            ResourceLocation itemLocation = Objects.requireNonNull(item.getRegistryName());
+            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(itemLocation, "inventory"));
+        }
     }
 }
