@@ -8,6 +8,7 @@ import com.thepoptartcrpr.culinary.handlers.LootTableHandler;
 import com.thepoptartcrpr.culinary.handlers.SeedHandler;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
+import com.thepoptartcrpr.culinary.init.CTools;
 import com.thepoptartcrpr.culinary.proxy.CommonProxy;
 import com.thepoptartcrpr.culinary.worldgen.OreGeneration;
 import lombok.Getter;
@@ -42,6 +43,7 @@ public class Culinary {
 
         MinecraftForge.EVENT_BUS.register(new CBlocks());
         MinecraftForge.EVENT_BUS.register(new CItems());
+        MinecraftForge.EVENT_BUS.register(new CTools());
 
         MinecraftForge.EVENT_BUS.register(new ConfigHandler());
     }
