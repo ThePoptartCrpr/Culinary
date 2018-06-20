@@ -2,7 +2,6 @@ package com.thepoptartcrpr.culinary.handlers;
 
 import com.thepoptartcrpr.culinary.Culinary;
 import net.minecraftforge.common.config.Config;
-import net.minecraftforge.common.config.Config.Name;
 import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.Type;
 import net.minecraftforge.common.config.ConfigManager;
