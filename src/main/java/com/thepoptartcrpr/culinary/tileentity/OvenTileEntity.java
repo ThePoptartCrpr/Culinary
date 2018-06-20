@@ -1,14 +1,10 @@
 package com.thepoptartcrpr.culinary.tileentity;
 
-import com.thepoptartcrpr.culinary.utils.Utils;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class OvenTileEntity extends TileEntity implements ITickable {
 
@@ -24,13 +20,11 @@ public class OvenTileEntity extends TileEntity implements ITickable {
         super.readFromNBT(nbt);
 
         this.tick = nbt.getInteger("Tick");
-        Utils.getConsole().info("read " + nbt.getInteger("Tick"));
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
         nbt.setInteger("Tick", this.tick);
-        Utils.getConsole().info("saved " + this.tick);
 
         return super.writeToNBT(nbt);
     }
@@ -39,7 +33,6 @@ public class OvenTileEntity extends TileEntity implements ITickable {
     public void update() {
         if (!this.world.isRemote) {
             tick++;
-            Utils.getConsole().info(tick);
             this.markDirty();
         }
     }
