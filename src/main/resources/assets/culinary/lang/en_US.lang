@@ -9,6 +9,7 @@ tile.oven.name=Oven
 
 # Items
 item.salt.name=Salt
+item.fish_tuna.name=Raw Tuna
 
 # Crops
 item.corn.name=Corn

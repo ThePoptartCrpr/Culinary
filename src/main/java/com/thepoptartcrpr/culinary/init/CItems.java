@@ -27,14 +27,18 @@ public class CItems {
     // Crops
     public static Item corn = new CFood("corn", 2, 2, false);
 
+    // Fish
+    public static Item fishTuna = new CFood("fish_tuna", 2, 2, false);
+
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
         CreativeTabs tabIngredient = Culinary.getInstance().getTabIngredient();
 
         event.getRegistry().registerAll(
-            salt.setCreativeTab(tabIngredient),
-            cornSeeds.setCreativeTab(tabIngredient),
-            corn.setCreativeTab(tabIngredient)
+                salt.setCreativeTab(tabIngredient),
+                cornSeeds.setCreativeTab(tabIngredient),
+                corn.setCreativeTab(tabIngredient),
+                fishTuna.setCreativeTab(tabIngredient)
         );
     }
 
@@ -43,7 +47,8 @@ public class CItems {
         registerRender(
                 salt,
                 cornSeeds,
-                corn
+                corn,
+                fishTuna
         );
     }
 
