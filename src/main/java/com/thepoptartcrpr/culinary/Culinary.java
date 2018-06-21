@@ -1,6 +1,7 @@
 package com.thepoptartcrpr.culinary;
 
 import com.thepoptartcrpr.culinary.creativetabs.TabCMachine;
+import com.thepoptartcrpr.culinary.events.BlockEvents;
 import com.thepoptartcrpr.culinary.handlers.ConfigHandler;
 import com.thepoptartcrpr.culinary.creativetabs.TabCIngredient;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
@@ -53,7 +54,10 @@ public class Culinary {
         proxy.init();
 
         MinecraftForge.EVENT_BUS.register(new EntityEvents());
+        MinecraftForge.EVENT_BUS.register(new BlockEvents());
+
         MinecraftForge.EVENT_BUS.register(new LootTableHandler());
+
         SeedHandler.registerSeeds();
 
         GameRegistry.registerWorldGenerator(new OreGeneration(), 0);

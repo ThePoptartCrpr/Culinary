@@ -19,6 +19,8 @@ public class ConfigHandler {
     public static class CONFIG {
         @Comment("When enabled, all animals will drop bones on death")
         public static boolean   shouldDropBones = true;
+        @Comment("When enabled, logs harvested with a saw tool will automatically drop planks. You might want to disable this if you have, for instance, modified the plank recipe")
+        public static boolean   shouldSawLogs = true;
     }
 
 }
