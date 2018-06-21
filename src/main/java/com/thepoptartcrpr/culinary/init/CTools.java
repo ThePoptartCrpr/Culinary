@@ -20,7 +20,7 @@ import java.util.Objects;
 public class CTools {
 
     public static final Item.ToolMaterial steelKnifeMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":steelKnife", 2, 250, 2, 1F, 12);
-    public static final Item.ToolMaterial sawMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":saw", 2, 250, 2, 0, 12);
+    public static final Item.ToolMaterial sawMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":saw", 2, 200, 4, 3, 12);
 
     public static ItemSword steelKnife = new CItemSword(steelKnifeMaterial, "steel_knife");
     public static ItemAxe saw = new CItemAxe(sawMaterial, "saw");
