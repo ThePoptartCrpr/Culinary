@@ -1,10 +1,12 @@
 package com.thepoptartcrpr.culinary.init;
 
 import com.thepoptartcrpr.culinary.Culinary;
+import com.thepoptartcrpr.culinary.items.CItemAxe;
 import com.thepoptartcrpr.culinary.items.CItemSword;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -18,20 +20,24 @@ import java.util.Objects;
 public class CTools {
 
     public static final Item.ToolMaterial steelKnifeMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":steelKnife", 2, 250, 2, 1F, 12);
+    public static final Item.ToolMaterial sawMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":saw", 2, 250, 2, 0, 12);
 
     public static ItemSword steelKnife = new CItemSword(steelKnifeMaterial, "steel_knife");
+    public static ItemAxe saw = new CItemAxe(sawMaterial, "saw");
 
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-                steelKnife
+                steelKnife,
+                saw
         );
     }
 
     @SubscribeEvent
     public void registerRenders(ModelRegistryEvent event) {
         registerRender(
-                steelKnife
+                steelKnife,
+                saw
         );
     }
 
