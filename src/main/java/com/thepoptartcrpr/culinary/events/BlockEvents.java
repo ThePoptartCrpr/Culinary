@@ -1,6 +1,7 @@
 package com.thepoptartcrpr.culinary.events;
 
 import com.thepoptartcrpr.culinary.handlers.ConfigHandler;
+import com.thepoptartcrpr.culinary.init.CTools;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -15,8 +16,7 @@ public class BlockEvents {
     public void onBlockDrop(BlockEvent.HarvestDropsEvent event) {
         Block block = event.getState().getBlock();
         ItemStack heldItem = event.getHarvester().getHeldItemMainhand();
-        // TODO: make this also check if player is holding saw item once implemented
-        if (block == Blocks.LOG && ConfigHandler.CONFIG.shouldSawLogs) {
+        if (block == Blocks.LOG && ConfigHandler.CONFIG.shouldSawLogs && heldItem.isItemEqualIgnoreDurability(new ItemStack(CTools.saw))) {
             // TODO: improve functionality of below remove statement
             event.getDrops().remove(event.getDrops().get(0));
             // TODO: drop plank of correct type according to log type
