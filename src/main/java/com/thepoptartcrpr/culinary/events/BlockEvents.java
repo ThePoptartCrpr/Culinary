@@ -1,10 +1,12 @@
 package com.thepoptartcrpr.culinary.events;
 
 import com.thepoptartcrpr.culinary.handlers.ConfigHandler;
+import com.thepoptartcrpr.culinary.handlers.SoundHandler;
 import com.thepoptartcrpr.culinary.init.CTools;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.SoundCategory;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -21,6 +23,8 @@ public class BlockEvents {
             event.getDrops().remove(event.getDrops().get(0));
             // TODO: drop plank of correct type according to log type
             event.getDrops().add(new ItemStack(Blocks.PLANKS, 4));
+
+            event.getWorld().playSound(null, event.getPos(), SoundHandler.sawBlock, SoundCategory.BLOCKS, 1, 1);
         }
     }
 

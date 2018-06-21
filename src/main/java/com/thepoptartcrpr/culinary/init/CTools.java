@@ -4,7 +4,6 @@ import com.thepoptartcrpr.culinary.Culinary;
 import com.thepoptartcrpr.culinary.items.CItemAxe;
 import com.thepoptartcrpr.culinary.items.CItemSword;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemSword;
@@ -19,7 +18,7 @@ import java.util.Objects;
 
 public class CTools {
 
-    public static final Item.ToolMaterial steelKnifeMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":steelKnife", 2, 250, 2, 1F, 12);
+    public static final Item.ToolMaterial steelKnifeMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":steelKnife", 2, 250, 2, 1, 12);
     public static final Item.ToolMaterial sawMaterial = EnumHelper.addToolMaterial(Culinary.Reference.MODID + ":saw", 2, 200, 4, 3, 12);
 
     public static ItemSword steelKnife = new CItemSword(steelKnifeMaterial, "steel_knife");

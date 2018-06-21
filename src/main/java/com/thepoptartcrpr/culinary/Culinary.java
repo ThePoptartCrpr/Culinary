@@ -9,6 +9,7 @@ import com.thepoptartcrpr.culinary.creativetabs.TabCIngredient;
 import com.thepoptartcrpr.culinary.events.EntityEvents;
 import com.thepoptartcrpr.culinary.handlers.LootTableHandler;
 import com.thepoptartcrpr.culinary.handlers.SeedHandler;
+import com.thepoptartcrpr.culinary.handlers.SoundHandler;
 import com.thepoptartcrpr.culinary.init.CBlocks;
 import com.thepoptartcrpr.culinary.init.CItems;
 import com.thepoptartcrpr.culinary.init.CTools;
@@ -49,6 +50,8 @@ public class Culinary {
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit();
         proxy.registerTileEntities();
+
+        SoundHandler.init();
 
         MinecraftForge.EVENT_BUS.register(new CBlocks());
         MinecraftForge.EVENT_BUS.register(new CItems());

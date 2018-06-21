@@ -1,0 +1,7 @@
+{
+  "saw": {
+    "category": "block",
+    "sounds": ["culinary:saw"],
+    "subtitle": "culinary.subtitle.saw"
+  }
+}

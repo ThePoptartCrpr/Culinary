@@ -30,3 +30,6 @@ advancement.culinary:crop=Culinary
 advancement.culinary:crop.desc=Break grass until you find one of the seeds added by Culinary
 advancement.culinary:harvest=The Harvest
 advancement.culinary:harvest.desc=Harvest a crop added by Culinary
+
+# Sounds
+culinary.subtitle.saw=Log sawed
