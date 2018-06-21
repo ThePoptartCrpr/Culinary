@@ -1,9 +1,7 @@
 {
   "variants": {
-    "normal": [
-      {
-        "model": "culinary:salt_ore"
-      }
-    ]
+    "normal": {
+      "model": "culinary:salt_ore"
+    }
   }
 }
