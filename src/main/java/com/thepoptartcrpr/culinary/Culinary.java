@@ -1,6 +1,8 @@
 package com.thepoptartcrpr.culinary;
 
+import com.thepoptartcrpr.culinary.creativetabs.TabCFood;
 import com.thepoptartcrpr.culinary.creativetabs.TabCMachine;
+import com.thepoptartcrpr.culinary.creativetabs.TabCTools;
 import com.thepoptartcrpr.culinary.events.BlockEvents;
 import com.thepoptartcrpr.culinary.handlers.ConfigHandler;
 import com.thepoptartcrpr.culinary.creativetabs.TabCIngredient;
@@ -36,6 +38,12 @@ public class Culinary {
 
     @Getter
     private final CreativeTabs tabMachine = new TabCMachine();
+
+    @Getter
+    private final CreativeTabs tabTools = new TabCTools();
+
+    @Getter
+    private final CreativeTabs tabFood = new TabCFood();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {

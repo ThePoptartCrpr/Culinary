@@ -28,8 +28,8 @@ public class CTools {
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-                steelKnife,
-                saw
+                steelKnife.setCreativeTab(Culinary.getInstance().getTabTools()),
+                saw.setCreativeTab(Culinary.getInstance().getTabTools())
         );
     }
 
