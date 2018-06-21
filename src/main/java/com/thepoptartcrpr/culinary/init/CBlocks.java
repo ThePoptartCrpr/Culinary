@@ -6,6 +6,7 @@ import com.thepoptartcrpr.culinary.blocks.machines.OvenBlock;
 import com.thepoptartcrpr.culinary.blocks.machines.TableBlock;
 import com.thepoptartcrpr.culinary.blocks.ores.SaltOreBlock;
 
+import com.thepoptartcrpr.culinary.blocks.plants.bush.BushBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -27,6 +28,7 @@ public class CBlocks {
 
     // Crops
     public static Block cornCrop = new CornCropBlock();
+    public static Block bush = new BushBlock();
 
     // Machines
     public static Block oven = new OvenBlock().setCreativeTab(Culinary.getInstance().getTabMachine());
@@ -37,6 +39,7 @@ public class CBlocks {
         event.getRegistry().registerAll(
                 saltOre,
                 cornCrop,
+                bush,
                 oven,
                 tableEmpty
         );
@@ -47,6 +50,7 @@ public class CBlocks {
         event.getRegistry().registerAll(
                 blockToItem(saltOre),
                 blockToItem(cornCrop),
+                blockToItem(bush),
                 blockToItem(oven),
                 blockToItem(tableEmpty)
         );
@@ -54,8 +58,10 @@ public class CBlocks {
 
     @SubscribeEvent
     public void registerRenders(ModelRegistryEvent event) {
-        registerRender(saltOre,
+        registerRender(
+                saltOre,
                 cornCrop,
+                bush,
                 oven,
                 tableEmpty
         );

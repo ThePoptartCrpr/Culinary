@@ -3,6 +3,8 @@ tile.salt_ore.name=Salt Ore
 
 tile.corn_crop.name=Corn Crop
 
+tile.bush.name=Bush
+
 # Machines
 tile.table_empty.name=Table
 tile.oven.name=Oven
