@@ -11,7 +11,7 @@ import java.util.Random;
 public class SaltOreBlock extends CBlock {
     public SaltOreBlock() {
         super("salt_ore", Material.ROCK, 2, 2);
-        setHarvestLevel("pickaxe", 2);
+        this.setHarvestLevel("pickaxe", 2);
     }
 
     @Override
