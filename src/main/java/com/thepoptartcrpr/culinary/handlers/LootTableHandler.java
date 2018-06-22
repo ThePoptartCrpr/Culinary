@@ -2,7 +2,6 @@ package com.thepoptartcrpr.culinary.handlers;
 
 import com.thepoptartcrpr.culinary.Culinary;
 import com.thepoptartcrpr.culinary.init.CItems;
-import com.thepoptartcrpr.culinary.utils.Utils;
 import net.minecraft.world.storage.loot.LootEntryItem;
 import net.minecraft.world.storage.loot.LootPool;
 import net.minecraft.world.storage.loot.LootTable;
@@ -21,7 +20,6 @@ public class LootTableHandler {
             LootTable table = event.getTable();
             LootPool pool = table.getPool("main");
 
-            // Tuna fish
             pool.addEntry(new LootEntryItem(CItems.fishTuna, 25, 0, new LootFunction[0], new LootCondition[0], Culinary.Reference.MODID + "loot_fish_tuna"));
         }
     }
