@@ -24,6 +24,8 @@ item.corn_seeds.name=Corn Seeds
 # Creative Tabs
 itemGroup.cingredient=Culinary - Ingredients
 itemGroup.cmachine=Culinary - Machines
+itemGroup.ctools=Culinary - Tools
+itemGroup.cfood=Culinary - Food
 
 # Advancements
 advancement.culinary:crop=Culinary
