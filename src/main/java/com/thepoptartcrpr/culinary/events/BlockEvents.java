@@ -16,17 +16,21 @@ public class BlockEvents {
     public void onBlockDrop(BlockEvent.HarvestDropsEvent event) {
         Block block = event.getState().getBlock();
         ItemStack heldItem = event.getHarvester().getHeldItemMainhand();
+
+        int toDrop = ConfigHandler.CONFIG.planksToSaw;
+        if (toDrop > 4) toDrop = 4;
+
         if (block == Blocks.LOG && ConfigHandler.CONFIG.shouldSawLogs && heldItem.isItemEqualIgnoreDurability(new ItemStack(CTools.saw))) {
             // TODO: improve functionality of below remove statement
             event.getDrops().remove(event.getDrops().get(0));
-            event.getDrops().add(new ItemStack(Blocks.PLANKS, ConfigHandler.CONFIG.planksToSaw, block.damageDropped(event.getState())));
+            event.getDrops().add(new ItemStack(Blocks.PLANKS, toDrop, block.damageDropped(event.getState())));
 
             event.getWorld().playSound(null, event.getPos(), SoundHandler.sawBlock, SoundCategory.BLOCKS, 1, 1);
         }
         else if (block == Blocks.LOG2 && ConfigHandler.CONFIG.shouldSawLogs && heldItem.isItemEqualIgnoreDurability(new ItemStack(CTools.saw))) {
             // TODO: improve functionality of below remove statement
             event.getDrops().remove(event.getDrops().get(0));
-            event.getDrops().add(new ItemStack(Blocks.PLANKS, ConfigHandler.CONFIG.planksToSaw, block.damageDropped(event.getState()) + 4));
+            event.getDrops().add(new ItemStack(Blocks.PLANKS, toDrop, block.damageDropped(event.getState()) + 4));
 
             event.getWorld().playSound(null, event.getPos(), SoundHandler.sawBlock, SoundCategory.BLOCKS, 1, 1);
         }

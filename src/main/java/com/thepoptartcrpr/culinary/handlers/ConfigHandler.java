@@ -21,7 +21,7 @@ public class ConfigHandler {
         public static boolean   shouldDropBones = true;
         @Comment("When enabled, logs harvested with a saw tool will automatically drop planks. You might want to disable this if you have, for instance, modified the plank recipe")
         public static boolean   shouldSawLogs = true;
-        @Comment("When shouldSawLogs is enabled, this modifies how many planks are dropped when a log is sawed")
+        @Comment("When shouldSawLogs is enabled, this modifies how many planks are dropped when a log is sawed, maximum of 4")
         public static int       planksToSaw = 4;
     }
 
