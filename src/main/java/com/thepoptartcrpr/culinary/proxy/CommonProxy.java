@@ -16,7 +16,7 @@ public class CommonProxy {
     }
 
     public void registerTileEntities() {
-        GameRegistry.registerTileEntity(OvenTileEntity.class, new ResourceLocation(Culinary.Reference.MODID + ":oven"));
+        GameRegistry.registerTileEntity(OvenTileEntity.class, new ResourceLocation(Culinary.Reference.MODID, ":oven"));
     }
 
 }
