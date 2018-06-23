@@ -4,6 +4,7 @@ import com.thepoptartcrpr.culinary.Culinary;
 import com.thepoptartcrpr.culinary.blocks.crops.CornCropBlock;
 import com.thepoptartcrpr.culinary.blocks.machines.OvenBlock;
 import com.thepoptartcrpr.culinary.blocks.machines.TableBlock;
+import com.thepoptartcrpr.culinary.blocks.machines.TableCuttingBoardBlock;
 import com.thepoptartcrpr.culinary.blocks.ores.SaltOreBlock;
 
 import com.thepoptartcrpr.culinary.blocks.plants.bush.BushBlock;
@@ -33,6 +34,7 @@ public class CBlocks {
     // Machines
     public static Block oven = new OvenBlock().setCreativeTab(Culinary.getInstance().getTabMachine());
     public static Block tableEmpty = new TableBlock().setCreativeTab(Culinary.getInstance().getTabMachine());
+    public static Block tableCuttingBoard = new TableCuttingBoardBlock().setCreativeTab(Culinary.getInstance().getTabMachine());
 
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -41,7 +43,8 @@ public class CBlocks {
                 cornCrop,
                 bush,
                 oven,
-                tableEmpty
+                tableEmpty,
+                tableCuttingBoard
         );
     }
 
@@ -52,7 +55,8 @@ public class CBlocks {
                 blockToItem(cornCrop),
                 blockToItem(bush),
                 blockToItem(oven),
-                blockToItem(tableEmpty)
+                blockToItem(tableEmpty),
+                blockToItem(tableCuttingBoard)
         );
     }
 
@@ -63,7 +67,8 @@ public class CBlocks {
                 cornCrop,
                 bush,
                 oven,
-                tableEmpty
+                tableEmpty,
+                tableCuttingBoard
         );
     }
 

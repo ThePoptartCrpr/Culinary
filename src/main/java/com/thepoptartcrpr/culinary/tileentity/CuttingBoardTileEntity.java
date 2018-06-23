@@ -6,35 +6,25 @@ import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 
-public class OvenTileEntity extends TileEntity implements ITickable {
+public class CuttingBoardTileEntity extends TileEntity implements ITickable {
 
-    // Temporary tick system to test NBT data. Will remove later.
-    private int tick = 0;
-
-    public OvenTileEntity() {
+    public CuttingBoardTileEntity() {
 
     }
 
     @Override
     public void readFromNBT(NBTTagCompound nbt) {
         super.readFromNBT(nbt);
-
-        this.tick = nbt.getInteger("Tick");
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
-        nbt.setInteger("Tick", this.tick);
-
         return super.writeToNBT(nbt);
     }
 
     @Override
     public void update() {
-        if (!this.world.isRemote) {
-            tick++;
-            this.markDirty();
-        }
+
     }
 
     @Override
@@ -68,11 +58,5 @@ public class OvenTileEntity extends TileEntity implements ITickable {
         this.writeToNBT(nbt);
         return nbt;
     }
-
-    /*@Override
-    public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
-        if (oldState.getBlock() == newState.getBlock()) return false;
-        return true;
-    }*/
 
 }
