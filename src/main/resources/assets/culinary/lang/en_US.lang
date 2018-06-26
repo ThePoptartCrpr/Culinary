@@ -7,6 +7,7 @@ tile.bush.name=Bush
 
 # Machines
 tile.table_empty.name=Table
+item.table_cutting_board.name=Table
 tile.oven.name=Oven
 
 # Items
